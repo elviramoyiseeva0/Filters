@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">MultyFormMessage</h1>
+
+    <form asp-controller="Home" asp-action="GetFiles" method="post" enctype="multipart/form-data">
+        <input type="text" name="to" placeholder="To" required /><br /><br />
+        <input type="text" name="subject" placeholder="Subject" required /><br /><br />
+        <textarea name="content" placeholder="Content" required></textarea><br /><br />
+
+        <div style="border: 2px dashed #ccc; padding: 20px; margin: 10px 0;">
+            <p>Drag and drop files here</p>
+            <input type="file" name="uploads" multiple />
+        </div>
+
+        <input type="submit" value="Send" />
+    </form>
+</div>
